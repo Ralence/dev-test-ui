@@ -43,7 +43,6 @@ export class MyDropdown {
         <button class="toggle" onClick={() => this.toggleDropdown()}>
           {this.value || this.text} {this.toggle ? <span>&and;</span> : <span>&or;</span>}
         </button>
-        <slot></slot>
         {this.toggle &&
           this.innerOptions.map(option => (
             <div onClick={(e) => this.handleSelected(e)} key={option} class={`toggle ${this.value === option ? 'selected' : 'dropdown-item'}`}>
