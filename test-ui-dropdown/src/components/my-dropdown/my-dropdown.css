@@ -10,7 +10,8 @@
   margin: 8px;
 }
 
-button {
+button,
+.toggle {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -22,4 +23,12 @@ button {
   background-color: #fff;
   border: 1px solid #e2e2e4;
   color: #000;
+}
+
+.toggle.dropdown-item:hover {
+  background-color: #f6f6f9;
+}
+
+.selected {
+  background-color: #c1c6d8;
 }

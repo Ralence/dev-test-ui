@@ -7,7 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyDropdown {
+        "options": string;
         "text": string;
+        "value": string;
     }
 }
 declare global {
@@ -23,7 +25,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface MyDropdown {
+        "onOptionSelected"?: (event: CustomEvent<any>) => void;
+        "options"?: string;
         "text"?: string;
+        "value"?: string;
     }
     interface IntrinsicElements {
         "my-dropdown": MyDropdown;
