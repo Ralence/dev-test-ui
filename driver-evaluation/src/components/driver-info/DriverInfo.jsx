@@ -16,7 +16,10 @@ const DriverInfo = (props) => {
   const filters = [distances.shortDistance, distances.longDistance];
   const [selectedFilter, setSelectedFilter] = useState(null);
 
-  const handleReset = () => setDriversData(DRIVERS_DATA);
+  const handleReset = () => {
+    setDriversData(DRIVERS_DATA);
+    setSelectedFilter(null);
+  };
 
   const handleFilter = (filter) => {
     setSelectedFilter(filter);
