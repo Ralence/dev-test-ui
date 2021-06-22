@@ -1,0 +1,14 @@
+.header {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  background-color: #041e42;
+  color: white;
+  padding: 24px;
+}
