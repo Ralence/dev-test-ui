@@ -34,8 +34,9 @@ export class MyDropdown {
 
   handleSelected(e): void {
     console.log('Clicked: ', e.target.innerText);
-    this.optionSelected.emit(e.target.innerText)
-  }
+    this.optionSelected.emit(e.target.innerText);
+    this.toggleDropdown();
+  };
 
   render() {
     return (
@@ -43,12 +44,15 @@ export class MyDropdown {
         <button class="toggle" onClick={() => this.toggleDropdown()}>
           {this.value || this.text} {this.toggle ? <span>&and;</span> : <span>&or;</span>}
         </button>
-        {this.toggle &&
+        <div class="dropdown-item__wrapper">
+           {this.toggle &&
           this.innerOptions.map(option => (
             <div onClick={(e) => this.handleSelected(e)} key={option} class={`toggle ${this.value === option ? 'selected' : 'dropdown-item'}`}>
               {option}
             </div>
           ))}
+        </div>
+       
       </Host>
     );
   }

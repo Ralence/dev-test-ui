@@ -25,6 +25,10 @@ button,
   color: #000;
 }
 
+.dropdown-item__wrapper {
+  position: absolute;
+}
+
 .toggle.dropdown-item:hover {
   background-color: #f6f6f9;
 }
