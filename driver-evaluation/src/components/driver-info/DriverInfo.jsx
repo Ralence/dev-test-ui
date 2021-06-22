@@ -21,7 +21,10 @@ const DriverInfo = (props) => {
     <div className={styles.main}>
       <div>
         <div className={styles.actions}>
-          <div onClick={handleSort}>Distance</div>
+          <div onClick={handleSort}>
+            Distance
+            <my-dropdown></my-dropdown>
+          </div>
           <button className={styles.reset__btn} onClick={handleReset}>
             Reset
           </button>
