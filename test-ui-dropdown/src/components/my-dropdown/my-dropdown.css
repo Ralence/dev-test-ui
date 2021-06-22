@@ -24,6 +24,10 @@ button,
   color: #000;
 }
 
+button:hover {
+  border: 1px solid #a4a6ab;
+}
+
 .dropdown-item__wrapper {
   position: absolute;
 }
