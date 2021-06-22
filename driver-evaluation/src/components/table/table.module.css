@@ -1,0 +1,35 @@
+.main__table {
+  font-family: "Roboto";
+  max-width: 768px;
+  margin-top: 24px;
+  border-collapse: collapse;
+}
+
+.main__table__heading {
+  background-color: #e0e2eb;
+  font-weight: 700;
+  width: 192px;
+  text-align: left;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  border-bottom: 1px solid #c1c6d8;
+  text-transform: capitalize;
+}
+
+.main__table__cell {
+  width: 192px;
+  text-align: left;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.main__table__row {
+  border-bottom: 1px solid #e5e5e5;
+  background-color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
