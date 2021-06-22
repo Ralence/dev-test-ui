@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'my-dropdown',
@@ -6,11 +6,13 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class MyDropdown {
+  @Prop() text: string;
 
   render() {
     return (
       <Host>
-        HI!
+        <button>
+          {this.text} { <span>&or;</span>}</button>
       </Host>
     );
   }

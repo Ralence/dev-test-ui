@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Table from "../table/Table";
+import Dropdown from "../dropdown/Dropdown";
 
 import styles from "./driverInfo.module.css";
 
@@ -21,10 +22,7 @@ const DriverInfo = (props) => {
     <div className={styles.main}>
       <div>
         <div className={styles.actions}>
-          <div onClick={handleSort}>
-            Distance
-            <my-dropdown></my-dropdown>
-          </div>
+          <Dropdown onClick={handleSort} />
           <button className={styles.reset__btn} onClick={handleReset}>
             Reset
           </button>

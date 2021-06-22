@@ -1,3 +1,25 @@
+@font-face {
+  font-family: Roboto;
+  src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
+}
+
 :host {
-  display: block;
+  display: inline-block;
+  font-family: 'Roboto';
+  box-sizing: border-box;
+  margin: 8px;
+}
+
+button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  width: 208px;
+  height: 56px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #e2e2e4;
+  color: #000;
 }
