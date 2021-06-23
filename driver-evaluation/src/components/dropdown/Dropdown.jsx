@@ -12,6 +12,7 @@ function Dropdown({ text, options, setFilterCb, value }) {
     return current.removeEventListener("optionSelected", (e) => {
       setFilterCb(e.detail);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
