@@ -35,6 +35,6 @@ IMPORTANT in case your stancil is NOT running on localhost:3333 you need to upda
 
 This should start the react app on http://localhost:3000/
 and stencil app on http://localhost:3333/
-if the these are available
+if these are available
 
 If stencil starts on any other localhost make sure to update the script tag to get everything up and running correctly
