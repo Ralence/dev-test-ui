@@ -33,7 +33,6 @@ export class MyDropdown {
   }
 
   handleSelected(e): void {
-    console.log('Clicked: ', e.target.innerText);
     this.optionSelected.emit(e.target.innerText);
     this.toggleDropdown();
   };

@@ -6,7 +6,9 @@ function Dropdown({ text, options, setFilterCb, value }) {
   useEffect(() => {
     const { current } = elRef;
     current.addEventListener("optionSelected", (e) => {
-      console.log("SELECTED", e.detail);
+      setFilterCb(e.detail);
+    });
+    return current.removeEventListener("optionSelected", (e) => {
       setFilterCb(e.detail);
     });
   }, []);
