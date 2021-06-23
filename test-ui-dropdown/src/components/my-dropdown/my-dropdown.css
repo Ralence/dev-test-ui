@@ -3,6 +3,24 @@
   src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
 }
 
+@keyframes rotate-up {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate-down {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 :host {
   display: inline-block;
   font-family: 'Roboto';
@@ -22,6 +40,16 @@ button,
   background-color: #fff;
   border: 1px solid #e2e2e4;
   color: #000;
+}
+
+.rotate-up {
+  animation: rotate-up 0.25s;
+  animation-fill-mode: forwards;
+}
+
+.rotate-down {
+  animation: rotate-down 0.05s;
+  animation-fill-mode: forwards;
 }
 
 button:hover {

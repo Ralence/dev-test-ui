@@ -1,14 +1,17 @@
-import { Component, Host, h, State, Prop, Watch, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, State, Prop, Watch, Event, EventEmitter, getAssetPath } from '@stencil/core';
 
 @Component({
   tag: 'my-dropdown',
   styleUrl: 'my-dropdown.css',
+  assetsDirs: ['assets'],
   shadow: true,
 })
 export class MyDropdown {
   @Prop() options: string;
   @Prop() text: string;
   @Prop() value: string;
+
+  @Prop() caret = "caret.png";
 
   @State() toggle: boolean = false;
   @State() innerOptions: string[];
@@ -41,7 +44,8 @@ export class MyDropdown {
     return (
       <Host>
         <button class="toggle" onClick={() => this.toggleDropdown()}>
-          {this.value || this.text} {this.toggle ? <span>&and;</span> : <span>&or;</span>}
+          {this.value || this.text} 
+          <img class={`${this.toggle ? 'rotate-up' : 'rotate-down'}`} src={getAssetPath(`./assets/${this.caret}`)} alt="caret icon" width="14"/>
         </button>
         <div class="dropdown-item__wrapper">
            {this.toggle &&
