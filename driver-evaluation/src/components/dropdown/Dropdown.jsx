@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { handleCompositeDataProps } from "../../utils/utils";
 
 function Dropdown({ text, options, setFilterCb, value }) {
   const elRef = useRef();
@@ -17,7 +18,7 @@ function Dropdown({ text, options, setFilterCb, value }) {
     <my-dropdown
       value={value}
       text={text}
-      options={JSON.stringify(options)}
+      options={handleCompositeDataProps(options)}
       ref={elRef}
     ></my-dropdown>
   );
